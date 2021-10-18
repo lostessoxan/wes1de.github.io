@@ -175,8 +175,7 @@ div.firstBlock input {
 	color: #686976;
 	font-size: 13px;
 	padding: 0px 16px;
-	margin: 58px 13px 0px 13px;
-	margin-left: 886px;
+	margin: 58px 13px 0px 335px;
 }
 
 .secondBlock {
@@ -507,10 +506,6 @@ div.psina {
 	margin-top: 20px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: 18px;
-}
-
-#lorr p {
-	text-decoration: underline black;
 }
 
 .points {
