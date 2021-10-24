@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 body {
 	/* font-family: Arial, Helvetica, sans-serif; */
 	font-family: 'Roboto', sans-serif;
@@ -19,14 +23,14 @@ nav {
 	color: #fff;
 	font-size: 24px;
 	line-height: 60px;
-	padding-left: 388px;
 	float: left;
+	margin-left: 40px;
 	animation: coming 2s ease;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .menu {
 	float: left;
-	padding-left: 429px;
 }
 
 .menu li {
@@ -34,10 +38,34 @@ nav {
 	line-height: 60px;
 	color: #fff;
 	font-size: 14px;
-	margin-right: 40px;
+	margin-left: 30px;
 	text-transform: uppercase;
 	animation: topshift 1s forwards ease;
 	opacity: 0;
+}
+
+.menu li a {
+	text-decoration: none;
+}
+
+.custom_icon {
+	font-size: 25px;
+	color: #8900e4;
+	margin-right: 10px;
+
+	animation-name: rotation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 .main {
@@ -48,16 +76,16 @@ nav {
 }
 
 .title__container {
+	width: 100%;
 	float: left;
-	margin: 432px 0px 0px 404px;
 	color: #2c384a;
 	text-align: center;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	animation: leftside 1.2s ease;
+	animation: leftside 1.6s ease;
 }
 
 .title__container h1 {
-	font-size: 63px;
+	font-size: 72px;
 	font-weight: bold;
 }
 
@@ -65,15 +93,16 @@ nav {
 	margin-top: 38px;
 	color: #79818d;
 	font-size: 19px;
+	background-color: none;
 }
 
 .title__container input {
 	height: 40px;
 	text-align: center;
-	border: 2px solid #6d7682;
+	border: 2px solid #9708da;
 	border-radius: 5px;
 	background: none;
-	color: #6d7682;
+	color: #474a4e;
 	font-size: 13px;
 	padding: 0px 16px;
 	margin: 58px 13px 0px 13px;
@@ -85,6 +114,17 @@ nav {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	margin-top: 107px;
 	text-align: center;
+}
+
+.titlemain_20 {
+	font-size: 38px;
+	margin-top: 0;
+
+	color: #000000;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-align: center;
+	position: relative;
+	top: 20px;
 }
 
 .underl {
@@ -133,7 +173,11 @@ p.description2 {
 }
 
 .firstBlock {
-	width: 800px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	max-width: 800px;
 	margin: auto;
 }
 
@@ -151,7 +195,7 @@ p.description2 {
 div.firstBlock input {
 	transition: all 0.5s ease;
 	transform: scale(1);
-	margin: 58px 13px 0px 50px;
+	margin: 0;
 }
 
 .firstBlock input:hover {
@@ -175,12 +219,13 @@ div.firstBlock input {
 	color: #686976;
 	font-size: 13px;
 	padding: 0px 16px;
-	margin: 58px 13px 0px 335px;
+	margin-top: 50px;
 }
 
 .secondBlock {
 	background: url(secondblock.png) no-repeat;
 	height: 497px;
+
 	margin-top: 97px;
 }
 .secondBlock span {
@@ -210,48 +255,9 @@ div.firstBlock input {
 	transform: scale(1.5);
 }
 
-.icons {
-	margin-top: 108px;
-}
-
-.bloccc {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	width: 211px;
-	height: 155px;
-	font-weight: bold;
-	align-content: center;
-	text-align: center;
-}
 .secondBlock div.bloccc h3 {
 	color: #cf7600;
 	font-size: 18px;
-	margin-top: 23px;
-	margin-bottom: 15px;
-}
-
-#firi {
-	margin-left: 416px;
-	margin-top: 108px;
-}
-
-#seci {
-	margin-top: 108px;
-	position: relative;
-	margin-left: 708px;
-	display: block;
-	bottom: 265px;
-}
-
-#thir {
-	margin-left: 1003px;
-	position: relative;
-	bottom: 534px;
-}
-
-#four {
-	margin-left: 1293px;
-	position: relative;
-	bottom: 690px;
 }
 
 .centerText {
@@ -282,7 +288,7 @@ div.firstBlock input {
 	font-size: 25px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	margin-bottom: 10px;
-	margin-top: 25px;
+	margin-top: 11px;
 	transition: all 0.3s ease;
 	text-decoration: underline 2px #1c2534;
 }
@@ -449,13 +455,6 @@ div.firstBlock input {
 	margin: 20px 0px;
 }
 
-div.psina {
-	margin-top: 50px;
-	margin-left: 902px;
-	padding: auto;
-	display: block;
-}
-
 .lorem {
 	color: #243042;
 	font-size: 17px;
@@ -469,16 +468,26 @@ div.psina {
 	display: block;
 }
 
-.radio {
-	margin-top: 75px;
-	margin-left: 930px;
+.lorem22 {
+	color: #243042;
+	font-size: 17px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-align: center;
+	width: 693px;
+	height: 35px;
+	margin: auto;
+	margin-top: 10px;
+	padding: auto;
 }
 
 .contacts {
-	margin-top: 91px;
-	padding-top: 100px;
+	padding-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: center;
 	background-image: url('conts.png');
-	width: 1920px;
+
 	height: 808px;
 	background-repeat: no-repeat;
 	border: 3px solid rgb(69, 0, 87);
@@ -508,23 +517,11 @@ div.psina {
 	font-size: 18px;
 }
 
-.points {
-	width: 1000px;
-	height: 200px; /* 74*/
-	display: table;
-	margin-top: 43px;
-	margin-left: 716px;
-	position: relative;
-	left: 43px;
-}
-
 .steps {
 	width: 135px;
 	height: 72px;
 	text-align: center;
 	color: #fff;
-	display: table-cell;
-	margin-right: 70px;
 }
 
 .steps > p {
@@ -539,13 +536,9 @@ div.psina {
 .stepik {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: 20px;
-	display: block;
-	position: relative;
-	right: 270px;
-	width: 251px;
-	height: 17px;
 	color: rgb(255, 255, 255);
 	transition: all 0.3s ease;
+	margin-bottom: 10px;
 }
 
 .stepik span {
@@ -564,25 +557,15 @@ div.psina {
 }
 
 .box-steps {
-	width: max-content;
 	text-align: center;
-}
-
-.inputs {
-	min-width: 1000px;
-	display: block;
-	position: relative;
-	top: 50px;
-	right: 420px;
-	height: 149px;
+	height: 200px;
 }
 
 .firstin input {
 	width: 354;
 	height: 35px;
 	padding: 13px;
-	margin: 7px;
-	display: block;
+
 	background-color: rgb(204, 204, 204);
 }
 
@@ -590,36 +573,18 @@ div.psina {
 	width: 354;
 	height: 35px;
 	padding: 13px;
-	margin: 7px;
-	display: block;
-	position: relative;
-	left: 220px;
-	bottom: 42px;
-	background-color: rgb(204, 204, 204);
-}
+	margin-right: 7px;
 
-.thirdinp textarea {
-	max-width: 732px;
-	height: 94px;
-	padding: 13px;
-	margin: 7px;
-	display: block;
-	position: relative;
-	bottom: 30px;
 	background-color: rgb(204, 204, 204);
-	color: rgb(255, 255, 255);
 }
 
 .otprav input {
 	color: white;
 	border-radius: 15px;
+	margin-top: 20px;
 	padding: 10px;
 	background: none;
 	border: 2px solid white;
-	display: block;
-	position: relative;
-	top: 80px;
-	right: 250px;
 }
 
 .menu li a {
@@ -652,7 +617,7 @@ div.psina {
 .title__container > input:hover {
 	background: #344051;
 	color: #fff;
-	border: 2px solid rgb(79, 43, 165);
+	border: 2px solid #344051;
 }
 
 .title__container > input:active {
@@ -711,11 +676,11 @@ div.psina {
 @keyframes leftside {
 	from {
 		opacity: 0;
-		margin-left: -500px;
+		margin-left: -800px;
 	}
 	to {
 		opacity: 1;
-		margin-left: 404px;
+		margin-left: 0px;
 	}
 }
 
@@ -754,21 +719,13 @@ textarea::placeholder {
 	color: #fff;
 }
 
-.thirdinp {
-	position: relative;
-	left: 41px;
-	top: 20px;
-}
-
 .otprav {
 	position: relative;
 	top: 10px;
 }
 
-.block22 {
-	position: relative;
-	left: 410px;
-	bottom: 110px;
+.contacts-min-block {
+	width: max-content;
 }
 
 .otprav input {
@@ -809,7 +766,7 @@ textarea::placeholder {
 }
 
 .lorem_text {
-	width: max-content;
+	max-width: 800px;
 	margin: auto;
 	transform: scale(1);
 	transition: all 0.5s ease;
@@ -847,4 +804,158 @@ textarea::placeholder {
 #sob img:hover {
 	transform: scale(1.08);
 	border-top: 5px solid #e60000;
+}
+
+.dropdown-menu li a {
+	text-decoration: none;
+	margin-left: 6px;
+	font-weight: 600;
+}
+
+.white-btn:visited {
+	color: #fff;
+}
+
+.col-lg-6 {
+	position: relative;
+	top: 65px;
+}
+
+@media (max-width: 991px) {
+	.title__container,
+	.title__container h4,
+	.title__container input {
+		color: white;
+		border-radius: 20px;
+	}
+	.title__container {
+		background-color: rgba(0, 0, 0, 0.4);
+		padding-bottom: 20px;
+	}
+	.title__container input {
+		margin-top: 30px;
+		border: 2px solid rgb(255, 255, 255);
+	}
+
+	.title__container > input:hover {
+		background: #344051;
+		color: #fff;
+		border: 2px solid #ffffff;
+	}
+
+	.main h1:hover {
+		color: rgb(149, 229, 243);
+	}
+
+	.main h4:hover {
+		color: rgb(149, 229, 243);
+	}
+	.custom_icon {
+		color: rgb(85, 123, 248);
+	}
+}
+
+@media (max-width: 545px) {
+	.title__container {
+		width: 85%;
+	}
+	.main .col-lg-6 {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 603px) {
+	.title__container {
+		width: 85%;
+	}
+	.main .col-lg-6 {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.secondBlock-blocks {
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+
+	justify-content: center;
+	align-items: center;
+	gap: 6em;
+}
+
+.icons {
+	margin-bottom: 20px;
+}
+
+.bloccc {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	width: 211px;
+	height: 155px;
+	font-weight: bold;
+	align-content: center;
+	text-align: center;
+	align-self: center;
+	margin-top: 100px;
+}
+
+.secondBlock h5 {
+	margin-bottom: 30px;
+}
+
+.boxes-steps {
+	display: flex;
+	justify-content: baseline;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-icons {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	gap: 3em;
+}
+
+.inputs {
+	margin-top: 20px;
+	width: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1em;
+}
+
+.thirdinp textarea {
+	/* max-width: 300px; */
+
+	padding: 13px;
+	background: none;
+	color: rgb(255, 255, 255);
+}
+
+.reviews {
+	display: flex;
+	height: 400px;
+	margin-bottom: 50px;
+	justify-content: center;
+}
+
+.reviews-content {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 693px;
+	gap: 30px;
+	max-width: 800px;
+}
+
+.radio {
+	position: relative;
+	top: 20px;
 }
