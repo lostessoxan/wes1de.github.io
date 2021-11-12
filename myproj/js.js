@@ -1,3 +1,106 @@
+$('#InputPhone').mask('+7(999) 999-9999')
+
+$(document).ready(function () {
+	$('form').submit(function (event) {
+		event.preventDefault()
+		$('#InputPhone').mask('+7(999) 999-9999')
+		$.ajax({
+			type: 'POST',
+			url: 'php/mail.php',
+			date: $(this).serialize(),
+		}).done(function () {
+			$(this).find('input').val('')
+			alert('Successefully')
+			$('form').trigger('Reset')
+		})
+		return false
+	})
+})
+
+// Отложенные анимации animat`а
+
+new WOW().init()
+
+// $(document).ready(function () {
+// 	$('form').submit(function(event) {
+// 		if($('#InputPhone').val() == '' ) {
+// 			event.preventDefault()
+// 			alert('Дура, заполни место')
+// 		}
+// 	})
+
+// }
+
+// Отложенная анимация
+
+$(document).ready(function () {
+	let options = { threshold: [0.5] }
+	let observer = new IntersectionObserver(onEntry, options)
+	let elements = $('.element-animation')
+	elements.each((i, el) => {
+		observer.observe(el)
+	})
+
+	$(window).scroll(() => {
+		let scrollDistance = $(window).scrollTop()
+
+		$('.section').each((i, el) => {
+			if ($(el).offset().top - $('nav').outerHeight() <= scrollDistance) {
+				$('nav a').each((i, el) => {
+					if ($(el).hasClass('active')) {
+						$(el).removeClass('active')
+					}
+				})
+
+				$('nav li:eq(' + i + ')')
+					.find('a')
+					.addClass('active')
+			}
+		})
+	})
+})
+
+function onEntry(entry) {
+	entry.forEach((change) => {
+		if (change.isIntersecting) {
+			change.target.classList.add('show-animation')
+		}
+	})
+}
+
+// -------------------- Magnific PopUp
+
+$(document).ready(function () {
+	$('.image-link').magnificPopup({ type: 'image' })
+})
+
+//-------------------- SCROLLING
+
+$('a[href^="#aboutMe_firstblock"]').click(function () {
+	let valHref = $(this).attr('href')
+	$('html, body').animate({
+		scrollTop: $(valHref).offset().top - 60 + 'px',
+	})
+})
+
+$('a[href^="#scroll"]').click(function () {
+	let valHref = $(this).attr('href')
+	$('html, body').animate({
+		scrollTop: $(valHref).offset().top - 60 + 'px',
+	})
+})
+
+$('a[href^="#scroll_secondblock"]').click(function () {
+	let valHref = $(this).attr('href')
+	$('html, body').animate({
+		scrollTop: $(valHref).offset().top - 220 + 'px',
+	})
+})
+
+//-----------------------------
+
+// Калькулятор ( модальное окно )
+
 let typeOfSite = prompt(
 	'Какой тип сайта вы предпочитаете?\n0. - Визитка\n1. - Корпоративный сайт\n2. - Интернет Магазин'
 )
@@ -50,7 +153,7 @@ let timeObject = {
 	layout3: 3,
 }
 
-//  -------------------- Стоимость
+// //  -------------------- Стоимость
 
 let sumObject = {}
 let timeSumObject = {}
@@ -88,7 +191,7 @@ if (typeOfLayout == 0) {
 	sumObject['costLayout'] = moneyObject.layout3
 }
 
-//  -------------------- Сроки
+// //  -------------------- Сроки
 
 if (typeOfSite == 0) {
 	console.log(timeObject.type0)
@@ -123,7 +226,7 @@ if (typeOfLayout == 0) {
 	timeSumObject['timeLayout'] = timeObject.layout3
 }
 
-//  -------------------- Расчёт
+// //  -------------------- Расчёт
 
 console.log(sumObject)
 console.log(timeSumObject)
@@ -137,3 +240,14 @@ alert(
 			timeSumObject.timeLayout) +
 		' Дней'
 )
+
+// Занесение в калькулятор введённых пользователем чисел.
+
+let SummaryMoneyForCalc =
+	sumObject.costType + sumObject.costDesign + sumObject.costLayout
+
+let SummaryTimeForCalc =
+	timeSumObject.timeType + timeSumObject.timeDesign + timeSumObject.timeLayout
+
+$('.stoimostItem1 span:eq(1)').text(SummaryTimeForCalc)
+$('.stoimostItem2 span:eq(1)').text(SummaryMoneyForCalc)
